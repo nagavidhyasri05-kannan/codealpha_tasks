@@ -1,0 +1,38 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; padding: 30px 16px;
+  font-family: Arial, sans-serif; color: #f8fafc;
+  background: linear-gradient(135deg, #111827, #064e3b);
+}
+.container { width: min(1000px, 100%); margin: auto; }
+.hero { padding: 30px 0; }
+.eyebrow { color: #6ee7b7; font-weight: 800; letter-spacing: 1.5px; font-size: 12px; }
+h1 { font-size: clamp(35px, 7vw, 60px); margin: 10px 0; }
+.hero p { color: #cbd5e1; }
+.card, .event {
+  background: rgba(17,24,39,.95);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 18px; padding: 24px; margin: 20px 0;
+}
+.grid-form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+input, textarea {
+  width: 100%; padding: 13px; border-radius: 9px;
+  border: 1px solid #374151; background: #030712; color: white;
+}
+textarea { min-height: 100px; resize: vertical; grid-column: 1 / -1; }
+button {
+  border: 0; border-radius: 9px; padding: 13px 18px;
+  background: #059669; color: white; font-weight: 700; cursor: pointer;
+}
+.events { display: grid; gap: 16px; margin-top: 15px; }
+.event h3 { margin-top: 0; font-size: 24px; }
+.event p { color: #cbd5e1; }
+.meta { color: #a7f3d0; font-size: 14px; }
+.register-form { display: flex; gap: 8px; margin-top: 16px; }
+.register-form input { flex: 1; }
+.message { min-height: 20px; color: #a7f3d0; }
+@media (max-width: 650px) {
+  .grid-form { grid-template-columns: 1fr; }
+  textarea { grid-column: auto; }
+  .register-form { flex-direction: column; }
+}
