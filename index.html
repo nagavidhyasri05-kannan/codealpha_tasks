@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeAlpha URL Shortener</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <p class="eyebrow">CODEALPHA BACKEND TASK 1</p>
+      <h1>Simple URL Shortener</h1>
+      <p class="subtitle">Turn long links into short, shareable URLs.</p>
+
+      <form id="shortenForm">
+        <input id="url" type="url" placeholder="https://example.com/very-long-link" required>
+        <button type="submit">Shorten URL</button>
+      </form>
+
+      <div id="result" class="result hidden"></div>
+      <p id="error" class="error"></p>
+    </section>
+
+    <section class="card">
+      <h2>Recent Links</h2>
+      <div id="links">Loading...</div>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
